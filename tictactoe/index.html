@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/tictactoe.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <script src="js/jquery.js"></script>
+  <script src="js/tictactoe.js"></script>
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+  </div>
+  <!-- <div id="board">
+  <table>
+		<tr>
+    <td class="cell" id="sq1"><button id="button1">X</button></td>
+			<td class="cell" id="sq2"><button id="button2">X</button></td>
+			<td class="cell" id="sq3"><button id="button3">X</button></td>
+		</tr>
+		<tr>
+			<td class="cell" id="sq4"><button id="button4">O</button></td>
+			<td class="cell" id="sq5"><button id="button5">X</button></td>
+			<td class="cell" id="sq6"><button id="button6">O</button></td>
+		</tr>
+		<tr>
+			<td class="cell" id="sq7"><button id="button7">X</button></td>
+			<td class="cell" id="sq8"><button id="button8">O</button></td>
+			<td class="cell" id="sq9"><button id="button9">X</button></td>
+		</tr>
+	</table>
+  </div> -->
+  <div id="board">
+  <table>
+    <tr>
+      <td class="cell" id="sq1"><span id="drawing1"></span></td>
+      <td class="cell" id="sq2"><span id="drawing2"></span></td>
+      <td class="cell" id="sq3"><span id="drawing3"></span></td>
+    </tr>
+    <tr>
+      <td class="cell" id="sq4"><span id="drawing4"></span></td>
+      <td class="cell" id="sq5"><span id="drawing5"></span></td>
+      <td class="cell" id="sq6"><span id="drawing6"></span></td>
+    </tr>
+    <tr>
+      <td class="cell" id="sq7"><span id="drawing7"></span></td>
+      <td class="cell" id="sq8"><span id="drawing8"></span></td>
+      <td class="cell" id="sq9"><span id="drawing9"></span></td>
+    </tr>
+  </table>
+  </div>
+	<div class="gameEnd">
+		<div class="text"></div>
+	</div>
+
+  <!-- got 3 ideas for this layout -->
+
+
+
+  <!-- <div class="tic-tac-toe">
+  <div id="sq1" class="tile bg"></div>
+  <div id="sq2" class="tile bg"></div>
+  <div id="sq3" class="tile bg"></div>
+  <div id="sq4" class="tile bg"></div>
+  <div id="sq5" class="tile bg"></div>
+  <div id="sq6" class="tile bg"></div>
+  <div id="sq7" class="tile bg"></div>
+  <div id="sq8" class="tile bg"></div>
+  <div id="sq9" class="tile bg"></div>
+</div> -->
+
+<input id="reset-button" type="button" value="Restart">
+<input id="AI" type="button" value="vs. AI">
+<input id="two-players" type="button" value="2-player">
+
+</body>
+</html>
