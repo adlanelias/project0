@@ -1,251 +1,186 @@
-let counter = 0;
-let square1 = [];
-let square2 = [];
-let square3 = [];
-let square4 = [];
-let square5 = [];
-let square6 = [];
-let square7 = [];
-let square8 = [];
-let square9 = [];
-$(document).ready(function () {
-let board;
+$(document).ready(function() {
 
-const player1 = 'X'; //can replace later with images/whatever
-const player2 = 'O';
-// const cells = $('td');
-// const winCombinations = [ //combinations of winning directions
-//   [1,2,3],
-//   [4,5,6],
-//   [7,8,9],
-//   [1,4,7],
-//   [2,5,8],
-//   [3,6,9],
-//   [1,5,9],
-//   [3,5,7]
-// ];
+      // Sweetalert for player names
+        swal({
+        title: "Welcome to Tic-Tac-Toe",
+        text: "Player One, please enter your name.",
+        type: "input",
+        showCancelButton: false,
+        closeOnConfirm: false,
+        animation: "slide-from-top",
+        inputPlaceholder: "Write name"
+    }, function(inputValue) {
+        if (inputValue === false) return false;
+        if (inputValue === "") {
+            swal.showInputError("Please enter your name");
+            return false
+        }
+           swal({
+        title: "Welcome to Tic-Tac-Toe",
+        text: "Player Two, please enter your name.",
+        type: "input",
+        showCancelButton: false,
+        closeOnConfirm: false,
+        animation: "slide-from-top",
+        inputPlaceholder: "Write name"
+    }, function(inputValueTwo) {
+        if (inputValueTwo === false) return false;
+        if (inputValueTwo === "") {
+            swal.showInputError("Please enter your name");
+            return false
+        }
+        swal("Let the games begin, " + inputValue + " & " + inputValueTwo);
+        $(".player-one").text(inputValue);
+        $(".player-two").text(inputValueTwo);
 
-// const turns = function () {
-//   for (let i = 0; i < 9; i++) {
-//     if (counter % 2 === 0) {
-//       // player1
-//       counter++;;
-//     } else if (counter % 2 != 0){
-//       // player2
-//       counter++;;
-//     }
-//   }
-
-// $(cells).on('click', function() {
-//   if (counter % 2 === 0) {
-//     $('#drawing').text(`${player1}`);
-//   } else if (counter % 2 != 0) {
-//     $('#drawing').text(`${player2}`)
-//   }
-//   $('#drawing')
-//   counter++;
-// })
-
-$('#sq1').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing1').text(`${player1}`);
-      square1.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing1').text(`${player2}`)
-      square1.push('O');
-  }
-  $('#drawing1').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-})
-
-$('#sq2').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing2').text(`${player1}`);
-      square2.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing2').text(`${player2}`)
-      square2.push('0');
-  }
-  $('#drawing2').css('display','block');
-  counter++;
-  winCondition();
-  draw();
+    });
 });
 
-$('#sq3').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing3').text(`${player1}`);
-      square3.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing3').text(`${player2}`)
-      square3.push('O');
-  }
-  $('#drawing3').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    //Variables
+    let $gameCells = $('.cell');
+    let moves = ["", "", "", "", "", "", "", "", ""]
+    let count = 0;
+    let turn = 'X';
+    let winner = null;
+    let xWins = 0;
+    let oWins = 0;
+    let tie = 0;
 
-$('#sq4').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing4').text(`${player1}`);
-      square4.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing4').text(`${player2}`)
-      square4.push('O');
-  }
-  $('#drawing4').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    //Start game function, adds to counter and tracks turns
+    function startGame() {
+        $($gameCells).on('click', function() {
+            $(this).html(turn);
+            moves[this.id] = turn;
+            count++;
+            if (count % 2 === 0) {
+                turn = 'X'; //X turn
+                checkWinner('O');
+            } else {
+                turn = 'O'; //O turn
+                checkWinner('X');
+            }
+        });
+        console.log(moves, turn, count);
+    }
 
-$('#sq5').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing5').text(`${player1}`);
-      square5.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing5').text(`${player2}`)
-      square5.push('O');
-  }
-  $('#drawing5').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    scoreBoard();
+    startGame();
 
-$('#sq6').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing6').text(`${player1}`);
-      square6.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing6').text(`${player2}`)
-      square6.push('O');
-  }
-  $('#drawing6').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    //Scoreboard to track wins
+    function scoreBoard() {
+        $('.playerX').html(xWins);
+        $('.playerO').html(oWins);
+        $('.tie').html(tie);
+    }
 
-$('#sq7').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing7').text(`${player1}`);
-      square7.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing7').text(`${player2}`)
-      square7.push('O');
-  }
-  $('#drawing7').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    //Reset the board
+    function resetBoard() {
+        $gameCells.removeClass('won');
+        $gameCells.html('');
+        winner = 'null';
+        moves = ["", "", "", "", "", "", "", "", ""];
+        turn = 'X';
+        count = 0;
+    }
 
-$('#sq8').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing8').text(`${player1}`);
-      square8.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing8').text(`${player2}`)
-      square8.push('O');
-  }
-  $('#drawing8').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    //Button for new game - basically a reset
+    $('#newGame').click(function() {
+        $(this).on();
+        resetBoard();
+        startGame();
+        console.log(moves, turn, count);
+    });
 
-$('#sq9').on('click', function() {
-  if (counter % 2 === 0) {
-    $('#drawing9').text(`${player1}`);
-      square9.push('X');
-  } else if (counter % 2 != 0) {
-    $('#drawing9').text(`${player2}`)
-      square9.push('O');
-  }
-  $('#drawing9').css('display','block');
-  counter++;
-  winCondition();
-  draw();
-});
+    //Button for resetting the score
+    $('#resetScore').click(function() {
+        $(this).on();
+        winner = null;
+        xWins = 0;
+        oWins = 0;
+        tie = 0;
+        scoreBoard();
+    });
 
-$('#reset-button').on('click', function () {
-  $('span').text('');
-  counter = 0;
-  square1 = [];
-  square2 = [];
-  square3 = [];
-  square4 = [];
-  square5 = [];
-  square6 = [];
-  square7 = [];
-  square8 = [];
-  square9 = [];
-});
+    //Check winner function and adds to score
+    function checkWinner(player) {
 
-const winCondition = function () {
+        //score keeper
+        function score() {
+            if (winner === 'X') {
+                xWins++;
+            } else if (winner === 'O') {
+                oWins++;
+            } else {
+                tie++;
+            }
+        }
 
-  if (square1[0] === 'X' && square2[0] === 'X' && square3[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square1[0] === 'O' && square2[0] === 'O' && square3[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
+        // checks to see if there is a winner or a draw
+        if (moves[0] === player && moves[1] === player && moves[2] === player) {
+            $('#0, #1, #2').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[3] === player && moves[4] === player && moves[5] === player) {
+            $('#3, #4, #5').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[6] === player && moves[7] === player && moves[8] === player) {
+            $('#6, #7, #8').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[0] === player && moves[3] === player && moves[6] === player) {
+            $('#0, #3, #6').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[1] === player && moves[4] === player && moves[7] === player) {
+            $('#1, #4, #7').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[2] === player && moves[5] === player && moves[8] === player) {
+            $('#2, #5, #8').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[0] === player && moves[4] === player && moves[8] === player) {
+            $('#0, #4, #8').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (moves[2] === player && moves[4] === player && moves[6] === player) {
+            $('#2, #4, #6').addClass('won');
+            swal('Game Over!', 'Player ' + player + ' wins!', 'success');
+            winner = player;
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        } else if (count === 9) {
+            sweetAlert("Game over!", "It's a tie", "error");
+            score();
+            scoreBoard();
+            $($gameCells).off('click');
+        }
+    }
 
-  if (square4[0] === 'X' && square5[0] === 'X' && square6[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square4[0] === 'O' && square5[0] === 'O' && square6[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
+//somewhat hardcoded, need to think of an algorithm to make upgrades to the game
 
-  if (square7[0] === 'X' && square8[0] === 'X' && square9[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square7[0] === 'O'  && square8[0] === 'O'  && square9[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
-
-  if (square1[0] === 'X' && square4[0] === 'X' && square7[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square1[0] === 'O'  && square4[0] === 'O'  && square7[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
-
-  if (square2[0] === 'X' && square5[0] === 'X' && square8[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square2[0] === 'O' && square5[0] === 'O' && square8[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
-
-  if (square3[0] === 'X' && square6[0] === 'X' && square9[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square3[0] === 'O'  && square6[0] === 'O'  && square9[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
-
-  if (square1[0] === 'X' && square5[0] === 'X' && square9[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square1[0] === 'O'  && square5[0] === 'O'  && square9[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
-
-  if (square3[0] === 'X' && square5[0] === 'X' && square7[0] === 'X') {
-    alert("X IS THE WINNER!")
-  } else if (square3[0] === 'O'  && square5[0] === 'O'  && square7[0] === 'O') {
-    alert("O IS THE WINNER!")
-  }
-
-};
-
-const draw = function () {
-  if (square1.length === 1 && square2.length === 1 && square3.length === 1 && square4.length === 1 && square5.length === 1 && square6.length === 1 && square7.length === 1 && square8.length === 1 && square9.length === 1) {
-    alert(`Game is a draw`);
-  }
-};
-
-//game logic
-//restart function
-//animations
 
 });

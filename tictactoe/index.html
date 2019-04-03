@@ -1,63 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/tictactoe.css">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-  <script src="js/jquery.js"></script>
-  <script src="js/tictactoe.js"></script>
-  <title>Tic Tac Toe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    <script src="js/jquery.js"></script>
+    <script src="dist/sweetalert.min.js"></script>
+    <script src="js/tictactoe.js"></script>
+    <title>Tic Tac Toe</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Tic Tac Toe</h1>
-  </div>
-  <!-- <div id="board">
-  <table>
-		<tr>
-    <td class="cell" id="sq1"><button id="button1">X</button></td>
-			<td class="cell" id="sq2"><button id="button2">X</button></td>
-			<td class="cell" id="sq3"><button id="button3">X</button></td>
-		</tr>
-		<tr>
-			<td class="cell" id="sq4"><button id="button4">O</button></td>
-			<td class="cell" id="sq5"><button id="button5">X</button></td>
-			<td class="cell" id="sq6"><button id="button6">O</button></td>
-		</tr>
-		<tr>
-			<td class="cell" id="sq7"><button id="button7">X</button></td>
-			<td class="cell" id="sq8"><button id="button8">O</button></td>
-			<td class="cell" id="sq9"><button id="button9">X</button></td>
-		</tr>
-	</table>
-  </div> -->
-  <div id="board">
-  <table>
-    <tr>
-      <td class="cell" id="sq1"><span id="drawing1"></span></td>
-      <td class="cell" id="sq2"><span id="drawing2"></span></td>
-      <td class="cell" id="sq3"><span id="drawing3"></span></td>
-    </tr>
-    <tr>
-      <td class="cell" id="sq4"><span id="drawing4"></span></td>
-      <td class="cell" id="sq5"><span id="drawing5"></span></td>
-      <td class="cell" id="sq6"><span id="drawing6"></span></td>
-    </tr>
-    <tr>
-      <td class="cell" id="sq7"><span id="drawing7"></span></td>
-      <td class="cell" id="sq8"><span id="drawing8"></span></td>
-      <td class="cell" id="sq9"><span id="drawing9"></span></td>
-    </tr>
-  </table>
-  </div>
-
-	<div class="gameEnd">
-		<div class="text"></div>
-	</div>
-
-<input id="reset-button" type="button" value="Restart">
-<!-- <input id="AI" type="button" value="vs. AI">
-<input id="two-players" type="button" value="2-player"> -->
-
+    <h1><a style="text-decoration: none;" href="main.html">Tic-Tac-Toe</a></h1>
+    <div id="scoreboard">
+        <div class="score">
+            <p class="player-one"></p>
+            <div class="playerX"></div>
+        </div>
+        <div class="score">
+            <p>Draws</p>
+            <div class="tie"></div>
+        </div>
+        <div class="score">
+            <div class="player-two"></div>
+            <div class="playerO"></div>
+        </div>
+    </div>
+    <section id="gameboard">
+        <section class="row">
+            <div id="0" class="cell"></div>
+            <div id="1" class="cell"></div>
+            <div id="2" class="cell"></div>
+        </section>
+        <section class="row">
+            <div id="3" class="cell"></div>
+            <div id="4" class="cell"></div>
+            <div id="5" class="cell"></div>
+        </section>
+        <section class="row">
+            <div id="6" class="cell"></div>
+            <div id="7" class="cell"></div>
+            <div id="8" class="cell"></div>
+        </section>
+        <div class="buttons" style="text-align:center;">
+            <button id="newGame">New Game</button>
+            <button id="resetScore">Reset Score</button>
+        </div>
+    </section>
+    <!-- <img id="whackamole" src="https://media.giphy.com/media/IFC9VzNgR28so/giphy.gif" alt="whackamole">
+    <img id="quidditch" src="https://media.giphy.com/media/9MImEg7cdkSwsHm8eN/giphy.gif" alt="quidditch">
+    <img id="chess" src="https://media.giphy.com/media/mrTjb8ZXFeJdC/giphy.gif" alt="cat chess">
+    <img id="ipad" src="https://media.giphy.com/media/1pAhncsuyFjcixgtLY/giphy.gif" alt="cat ipad">
+    <img id="pingpong" src="https://media.giphy.com/media/ECwTCTrHPVqKI/giphy.gif" alt="cat pong">
+    <img id="cutecat" src="https://media.giphy.com/media/wHc92cHADhpLi/giphy.gif" alt="cute cat"> -->
 </body>
+
 </html>

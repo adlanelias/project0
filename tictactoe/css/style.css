@@ -2,6 +2,7 @@ body {
     font-size: 10px;
     font-family: 'Permanent Marker', cursive;
     text-align: center;
+    background-color: #dfffec;
 }
 
 h1 {
@@ -11,6 +12,11 @@ h1 {
     font-size: 7em;
     margin-bottom: 10px;
     text-transform: uppercase;
+    background-color: #b70909;
+    border-radius: 2em;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 10px;
 }
 
 #scoreboard {
@@ -38,7 +44,7 @@ p,
 .playerX,
 .playerO,
 .tie {
-    border: 5px solid #ff0000;
+    border: 5px solid #b70909;
     border-radius: 5px;
     margin-right: 20px;
     width: 50px;
@@ -47,7 +53,7 @@ p,
     text-align: center;
     font-family: 'Permanent Marker', cursive;
     font-size: 300%;
-    color: #ff0000;
+    color: #b70909;
     background-color: #54b5ff;
 }
 
@@ -68,7 +74,7 @@ p,
     text-align: center;
     font-family: 'Permanent Marker', cursive;
     font-size: 600%;
-    color: #ff0000;
+    color: #b70909;
 }
 
 .row {
@@ -89,7 +95,7 @@ p,
     margin-top: 10px;
     margin-right: 10px;
     font-size: 150%;
-    color: #ff0000;
+    color: #b70909;
     font-family: 'Permanent Marker', cursive;
     display: inline-block;
 }
@@ -106,13 +112,61 @@ button:focus {
 }
 
 .won {
-    background-color: #ff0000;
+    background-color: #b70909;
     color: #54b5ff;
 }
 
-#whackamole {
+nav {
+  margin-top: 200px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 30px;
+  padding: 0.5em;
+  border-radius: 1em;
+  color: white;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 50px;
+  color: #54b5ff;
+}
+
+nav a:hover {
+  transition: 0.5s all;
+  background-color: #b70909;
+  background-blend-mode: lighten;
+  padding: 0.5em;
+  border-radius: 1em;
+  color: white;
+  font-family: 'ZCOOL KuaiLe', cursive;
+
+}
+
+
+/* #whackamole {
     height: 450px;
     display: inline-block;
     margin-top: -500px;
     margin-right: -270px;
 }
+
+#quidditch {
+  display: inline-block;
+}
+
+#chess {
+  display: inline-block;
+}
+
+#ipad {
+  display: inline-block;
+}
+
+#pingpong {
+  display: inline-block;
+}
+
+#cutecat {
+  display: inline-block;
+} */

@@ -12,7 +12,7 @@ $(document).ready(function() {
     }, function(inputValue) {
         if (inputValue === false) return false;
         if (inputValue === "") {
-            swal.showInputError("Stop leaving it blank ye twat");
+            swal.showInputError("Please enter your name");
             return false
         }
            swal({
@@ -26,7 +26,7 @@ $(document).ready(function() {
     }, function(inputValueTwo) {
         if (inputValueTwo === false) return false;
         if (inputValueTwo === "") {
-            swal.showInputError("Stop leaving it blank ye twat");
+            swal.showInputError("Please enter your name");
             return false
         }
         swal("Let the games begin, " + inputValue + " & " + inputValueTwo);
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
     //Start game function, adds to counter and tracks turns
     function startGame() {
-        $($gameCells).one('click', function() {
+        $($gameCells).on('click', function() {
             $(this).html(turn);
             moves[this.id] = turn;
             count++;
