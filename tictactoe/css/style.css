@@ -17,6 +17,16 @@ h1 {
     margin-left: 150px;
     margin-right: 150px;
     padding: 10px;
+    transition: .2s;
+}
+
+h1 a:visited {
+  text-decoration: none;
+  color: #54b5ff;
+}
+
+h1:hover {
+  transform: scale(1.5);
 }
 
 #scoreboard {
@@ -117,7 +127,7 @@ button:focus {
 }
 
 nav {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 nav a {
@@ -143,30 +153,7 @@ nav a:hover {
 
 }
 
-
-/* #whackamole {
-    height: 450px;
-    display: inline-block;
-    margin-top: -500px;
-    margin-right: -270px;
-}
-
-#quidditch {
-  display: inline-block;
-}
-
-#chess {
-  display: inline-block;
-}
-
-#ipad {
-  display: inline-block;
-}
-
 #pingpong {
   display: inline-block;
+  margin-top: 100px;
 }
-
-#cutecat {
-  display: inline-block;
-} */

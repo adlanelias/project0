@@ -1,0 +1,151 @@
+body {
+    font-size: 10px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    background-color: #dfffec;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h1 {
+text-align: center;
+color: #54b5ff;
+font-family: 'ZCOOL KuaiLe', cursive;
+font-size: 7em;
+margin-bottom: 10px;
+text-transform: uppercase;
+background-color: #b70909;
+border-radius: 2em;
+margin-left: 150px;
+margin-right: 150px;
+padding: 10px;
+transition: .2s;
+}
+
+h1 a:visited {
+  text-decoration: none;
+  color: #54b5ff;
+}
+
+h1:hover {
+  transform: scale(1.5);
+}
+
+table {
+display: inline-block;
+width: 75%;
+margin: 0 auto;
+margin-top: 10px;
+font-family: 'Arimo', sans-serif;
+font-size: 70px;
+margin-left: 530px;
+margin-right: 530px;
+margin-bottom: 100px;
+}
+
+td {
+display: inline-block;
+width: 100px;
+height: 100px;
+line-height: 100px;
+background-color: #54b5ff;
+color: white;
+border: none;
+border-radius: 10%;
+box-shadow: 0 .03em .08em rgba(0,0,0, 0.5);
+margin: 8px;
+transition: background-color 0.2s ease;
+text-align: center;
+}
+
+td:hover {
+cursor: pointer;
+background-color: #b70909;
+}
+
+.selected {
+background-color: #b70909;
+}
+
+tr {
+list-style-type: none;
+width: 500px;
+}
+
+#selection {
+height: 60px;
+font-size: 1.5em;
+}
+
+button {
+border: none;
+background: transparent;
+width: 50px;
+height: 50px;
+margin: .3em;
+border-radius: 50%;
+}
+
+.hover:hover {
+background: #F38630;
+color: white;
+}
+
+:active {
+outline: none;
+}
+
+:focus {
+outline: none;
+}
+
+.seed {
+background: #F38630;
+color: white;
+}
+
+#result {
+padding-top: 20px;
+height: 40px;
+font-size: 1.5em;
+}
+
+#scoreboard {
+    width: 500px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+p,
+.player-one,
+.player-two {
+    text-align: left;
+    margin-bottom: 1px;
+    font-size: 12px;
+    font-family: 'Permanent Marker', cursive;
+    color: #54b5ff;
+    text-transform: uppercase;
+}
+
+.playerX,
+.playerO,
+.tie {
+    border: 5px solid #b70909;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 300%;
+    color: #b70909;
+    background-color: #54b5ff;
+    display: inline-block;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+}
