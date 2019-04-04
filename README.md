@@ -12,7 +12,7 @@ Main Menu
 <img width="1440" alt="Screenshot 2019-04-05 at 8 57 57 AM" src="https://user-images.githubusercontent.com/47695717/55591330-f935e500-5780-11e9-8e54-79669ee597ee.png">
 
 Single Player
-<img width="1440" alt="Screenshot 2019-04-05 at 8 59 15 AM" src="https://user-images.githubusercontent.com/47695717/55591407-3306eb80-5781-11e9-92e6-ddc5ae715489.png">
+<img width="1440" alt="Screenshot 2019-04-05 at 10 00 39 AM" src="https://user-images.githubusercontent.com/47695717/55594016-bc222080-5789-11e9-8d47-e2bef4497364.png">
 
 Two Player
 <img width="1440" alt="Screenshot 2019-04-05 at 9 57 17 AM" src="https://user-images.githubusercontent.com/47695717/55593882-428a3280-5789-11e9-8f8c-f10eb758eb9a.png">
