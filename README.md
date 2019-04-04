@@ -4,9 +4,11 @@ A simple Tic Tac Toe game. The objective is to get 3 in a row to win.
 
 Can be played 2 players or against AI.
 
+
 **How to play**
 
 Choose whether you want to play single-player or 2-players.
+
 
 _Single Player:_
 
@@ -17,6 +19,7 @@ Choose whether to be X or O.
 Click on a tile of choice and try to get 3 in a row!
 
 Click on the Tic tac toe heading to go back to Main Menu.
+
 
 _Two-players:_
 
@@ -30,13 +33,16 @@ Click on a tile and beat your friend by getting 3 in a row!
 
 Click on the Tic tac toe heading to go back to Main Menu.
 
+
 **Current features:**
 
 Single Player (almost impossible)
 
 Two-players
 
+
 **Future updates:**
+
 
 _Singleplayer:_
 
@@ -47,6 +53,7 @@ More responsive board.
 Fix the score counter so it doesn't move.
 
 Cooler animations for winning/draws/loss.
+
 
 _Two-players:_
 
