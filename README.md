@@ -15,7 +15,8 @@ Single Player
 <img width="1440" alt="Screenshot 2019-04-05 at 8 59 15 AM" src="https://user-images.githubusercontent.com/47695717/55591407-3306eb80-5781-11e9-92e6-ddc5ae715489.png">
 
 Two Player
-<img width="1440" alt="Screenshot 2019-04-05 at 9 00 44 AM" src="https://user-images.githubusercontent.com/47695717/55591502-621d5d00-5781-11e9-8c40-6813d057ec28.png">
+<img width="1440" alt="Screenshot 2019-04-05 at 9 57 17 AM" src="https://user-images.githubusercontent.com/47695717/55593882-428a3280-5789-11e9-8f8c-f10eb758eb9a.png">
+
 
 
 
