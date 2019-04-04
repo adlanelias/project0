@@ -1,4 +1,4 @@
-#Tic Tac Toe Project 0
+# H1 Tic Tac Toe Project 0
 
 A simple Tic Tac Toe game. The objective is to get 3 in a row to win.
 
@@ -6,7 +6,7 @@ Can be played 2 players or against AI.
 
 https://adlanelias.github.io/project0/index.html
 
-#Screenshots
+# H1 Screenshots
 
 Main Menu
 <img width="1440" alt="Screenshot 2019-04-05 at 8 57 57 AM" src="https://user-images.githubusercontent.com/47695717/55591330-f935e500-5780-11e9-8e54-79669ee597ee.png">
@@ -19,12 +19,12 @@ Two Player
 
 
 
-#How to play
+# H1 How to play
 
 Choose whether you want to play single-player or 2-players.
 
 
-##_Single Player:_
+## H2 _Single Player:_
 
 Click on the Single Player button.
 
@@ -35,7 +35,7 @@ Click on a tile of choice and try to get 3 in a row!
 Click on the Tic tac toe heading to go back to Main Menu.
 
 
-##_Two-players:_
+## H2 _Two-players:_
 
 Click on the Two Players button.
 
@@ -48,13 +48,13 @@ Click on a tile and beat your friend by getting 3 in a row!
 Click on the Tic tac toe heading to go back to Main Menu.
 
 
-#Current features:
+# H1 Current features:
 
 Single Player (almost impossible)
 
 Two-players
 
-#Language and Frameworks used:
+# H1 Language and Frameworks used:
 
 HTML
 
@@ -67,7 +67,7 @@ Bootstrap
 SweetAlert API
 
 
-#Known Bugs:
+# H1 Known Bugs:
 
 Scoreboard in singleplayer moves when updated, probably something wrong with the CSS.
 
@@ -79,10 +79,10 @@ Theres one pattern in which the AI is always beatable
 
 
 
-#Future updates:
+# H1 Future updates:
 
 
-##_Singleplayer:_
+## H2 _Singleplayer:_
 
 Updating the minmax algorithm to make it more impossible.
 
@@ -93,7 +93,7 @@ Fix the score counter so it doesn't move.
 Cooler animations for winning/draws/loss.
 
 
-##_Two-players:_
+## H2 _Two-players:_
 
 Give ability for player 1 and player 2 to choose different icons instead of defaulting to player 1 = X and player 2 = O.
 
