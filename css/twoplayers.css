@@ -1,0 +1,180 @@
+body {
+    font-size: 10px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    background-color: #dfffec;
+    background-image: url("https://img.itch.zone/aW1hZ2UvNjQ4MjIvMjkzMDM5LnBuZw==/original/HW5y5m.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    color: #54b5ff;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 7em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background-color: #b70909;
+    border-radius: 2em;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 10px;
+    transition: .2s;
+    background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
+    background-size: contain;
+}
+
+h1 a:visited {
+  text-decoration: none;
+  color: #54b5ff;
+}
+
+h1:hover {
+  transform: scale(1.5);
+}
+
+#scoreboard {
+    width: 500px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+}
+
+p,
+.player-one,
+.player-two {
+    text-align: left;
+    margin-bottom: 1px;
+    font-size: 12px;
+    font-family: 'Permanent Marker', cursive;
+    color: #54b5ff;
+    text-transform: uppercase;
+}
+
+.playerX,
+.playerO,
+.tie {
+    border: 5px solid #b70909;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 300%;
+    color: #b70909;
+    background-color: #54b5ff;
+}
+
+#gameboard {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.cell {
+    border: 5px solid #54b5ff;
+    background-color: #54b5ff;
+    border-radius: 0.5em;
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 600%;
+    color: white;
+}
+
+.cell:hover {
+  cursor: pointer;
+  background-color: #b70909;
+}
+
+.row {
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 0 auto;
+}
+
+#newGame,
+#resetScore {
+    width: 140px;
+    height: 40px;
+    border: 2px solid #54b5ff;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 150%;
+    color: #b70909;
+    font-family: 'Permanent Marker', cursive;
+    display: inline-block;
+}
+
+#newGame:hover,
+#resetScore:hover {
+    cursor: pointer;
+    background-color: #54b5ff;
+    color: white;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.won {
+    background-color: #b70909;
+    color: #54b5ff;
+}
+
+nav {
+  margin-top: 100px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 30px;
+  padding: 0.5em;
+  border-radius: 1em;
+  color: white;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 50px;
+  color: #54b5ff;
+}
+
+nav a:hover {
+  transition: 0.5s all;
+  background-color: #b70909;
+  background-blend-mode: lighten;
+  padding: 0.5em;
+  border-radius: 1em;
+  color: white;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  transform: scale(2);
+}
+
+#pingpong {
+  display: inline-block;
+  margin-top: 100px;
+}
+
+#singleplayer {
+  background-image: url("https://media.giphy.com/media/gUhLHTIdcHFBu/giphy.gif");
+  background-size: contain;
+}
+
+#twoplayers {
+  background-image: url("https://media.giphy.com/media/xBAreNGk5DapO/giphy.gif");
+  background-size: contain;
+}
