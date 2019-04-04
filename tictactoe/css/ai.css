@@ -40,7 +40,7 @@ font-family: 'Arimo', sans-serif;
 font-size: 70px;
 margin-left: 530px;
 margin-right: 530px;
-margin-bottom: 100px;
+margin-bottom: 50px;
 }
 
 td {
@@ -114,7 +114,6 @@ font-size: 1.5em;
     width: 500px;
     height: 120px;
     margin: 0 auto;
-    position: relative;
 }
 
 p,
@@ -148,4 +147,24 @@ p,
 .score {
     position: relative;
     display: inline-block;
+}
+
+#resetScore {
+    width: 140px;
+    height: 40px;
+    border: 2px solid #54b5ff;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 150%;
+    color: #b70909;
+    font-family: 'Permanent Marker', cursive;
+    display: inline-block;
+}
+
+#resetScore:hover {
+    cursor: pointer;
+    background-color: #54b5ff;
+    color: white;
 }

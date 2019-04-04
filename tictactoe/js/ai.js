@@ -2,8 +2,8 @@ let theboard = new Board();
 let ai = new AI('O');
 let selected, opponent;
 let tie = 0;
-let aiWins = 0;
-let playerWins = 0;
+let xWins = 0;
+let oWins = 0;
 
 $(document).ready(function(){
 	$('button').click(function(){
@@ -26,7 +26,6 @@ $(document).ready(function(){
 	});
 
 });
-
 
 
 function handleClicks() {
@@ -61,10 +60,14 @@ function handleClicks() {
 
 function gameOver(winner) {
 	//Notify the player of the status
-	if(winner) {
+	if(winner === 'X') {
 		$('#result').text(winner +' won the game!');
-    aiWins++;
-    $('.playerO').text(aiWins);
+		xWins++
+    $('.playerX').text(xWins);
+} else if (winner === 'O') {
+	$('#result').text(winner +' won the game!');
+	oWins++
+	$('.playerO').text(oWins);
 }
 	else {
 		$('#result').text('The game was a draw!');
