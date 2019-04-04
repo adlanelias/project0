@@ -4,6 +4,20 @@ A simple Tic Tac Toe game. The objective is to get 3 in a row to win.
 
 Can be played 2 players or against AI.
 
+https://adlanelias.github.io/project0/index.html
+
+**Screenshots**
+
+Main Menu
+<img width="1440" alt="Screenshot 2019-04-05 at 8 57 57 AM" src="https://user-images.githubusercontent.com/47695717/55591330-f935e500-5780-11e9-8e54-79669ee597ee.png">
+
+Single Player
+<img width="1440" alt="Screenshot 2019-04-05 at 8 59 15 AM" src="https://user-images.githubusercontent.com/47695717/55591407-3306eb80-5781-11e9-92e6-ddc5ae715489.png">
+
+Two Player
+
+
+
 
 **How to play**
 
@@ -39,6 +53,23 @@ Click on the Tic tac toe heading to go back to Main Menu.
 Single Player (almost impossible)
 
 Two-players
+
+**Language and Frameworks used:**
+
+Javascript & jQuery
+
+Bootstrap 
+
+SweetAlert API
+
+
+**Known Bugs**
+
+Scoreboard in singleplayer moves when updated, probably something wrong with the CSS.
+
+Theres one pattern in which the AI is always beatable
+
+
 
 
 **Future updates:**
