@@ -159,7 +159,7 @@ nav a:hover {
   border-radius: 1em;
   color: white;
   font-family: 'ZCOOL KuaiLe', cursive;
-
+  transform: scale(2);
 }
 
 #pingpong {
