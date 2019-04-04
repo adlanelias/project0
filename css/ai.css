@@ -34,13 +34,10 @@ h1:hover {
 
 table {
 display: inline-block;
-width: 75%;
 margin: 0 auto;
 margin-top: 10px;
 font-family: 'Arimo', sans-serif;
 font-size: 70px;
-margin-left: 530px;
-margin-right: 530px;
 margin-bottom: 50px;
 }
 
@@ -176,4 +173,10 @@ p,
     cursor: pointer;
     background-color: #54b5ff;
     color: white;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    margin:20px 0;
+  }
 }
