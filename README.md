@@ -56,6 +56,10 @@ Two-players
 
 **Language and Frameworks used:**
 
+HTML
+
+CSS
+
 Javascript & jQuery
 
 Bootstrap 
