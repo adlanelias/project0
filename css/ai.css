@@ -21,6 +21,8 @@ margin-left: 150px;
 margin-right: 150px;
 padding: 10px;
 transition: .2s;
+background-image: url("https://media.giphy.com/media/7TtvTUMm9mp20/giphy.gif");
+background-size: contain;
 }
 
 h1 a:visited {
